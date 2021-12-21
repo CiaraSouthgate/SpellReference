@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ciarasouthgate.spellreference.ui.SpellDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleOrGone="@{viewModel.isLoading}" />
+
+        <ScrollView
+            android:id="@+id/detail_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/detail_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/spell_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:padding="@dimen/spell_detail_text_padding"
+                    android:text="@{viewModel.spell.name}"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Acid Arrow" />
+
+                <ImageView
+                    android:id="@+id/favourite_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/favourite"
+                    app:layout_constraintBottom_toBottomOf="@id/spell_detail_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/spell_detail_title"
+                    tools:srcCompat="@drawable/ic_favourite_filled" />
+
+
+                <View
+                    android:id="@+id/spell_detail_title_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:background="?colorPrimaryVariant"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spell_detail_title" />
+
+                <GridLayout
+                    android:id="@+id/detail_abilities_grid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:alignmentMode="alignBounds"
+                    android:columnCount="3"
+                    android:useDefaultMargins="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spell_detail_title_divider" />
+
+                <View
+                    android:id="@+id/spell_detail_details_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:background="?colorPrimaryVariant"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_abilities_grid" />
+
+                <TextView
+                    android:id="@+id/description_text"
+                    style="@style/SpellDetailBodyStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.spell.description}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spell_detail_details_divider"
+                    tools:text="A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn." />
+
+                <TextView
+                    android:id="@+id/higher_level_title"
+                    style="@style/SpellDetailTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/higher_level_abilities"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_text" />
+
+                <TextView
+                    android:id="@+id/higher_level_text"
+                    style="@style/SpellDetailBodyStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.spell.higherLevel}"
+                    app:layout_constraintStart_toStartOf="@+id/higher_level_title"
+                    app:layout_constraintTop_toBottomOf="@+id/higher_level_title"
+                    tools:text="When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd." />
+
+                <TextView
+                    android:id="@+id/material_title"
+                    style="@style/SpellDetailTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/materials"
+                    app:layout_constraintStart_toStartOf="@+id/higher_level_text"
+                    app:layout_constraintTop_toBottomOf="@+id/higher_level_text" />
+
+                <TextView
+                    android:id="@+id/material_text"
+                    style="@style/SpellDetailBodyStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.spell.material}"
+                    app:layout_constraintStart_toStartOf="@+id/material_title"
+                    app:layout_constraintTop_toBottomOf="@+id/material_title"
+                    tools:text="Powdered rhubarb leaf and an adder's stomach." />
+
+                <TextView
+                    android:id="@+id/classes_title"
+                    style="@style/SpellDetailTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classes"
+                    app:layout_constraintStart_toStartOf="@+id/material_text"
+                    app:layout_constraintTop_toBottomOf="@+id/material_text" />
+
+                <TextView
+                    android:id="@+id/classes_text"
+                    style="@style/SpellDetailBodyStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.spell.classes}"
+                    app:layout_constraintStart_toStartOf="@+id/classes_title"
+                    app:layout_constraintTop_toBottomOf="@+id/classes_title"
+                    tools:text="Wizard" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

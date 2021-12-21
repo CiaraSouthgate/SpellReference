@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="spell"
+            type="com.ciarasouthgate.spellreference.database.Spell" />
+
+        <variable
+            name="level"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/saved_spell_title"
+            style="@style/SpellListTitleStyle"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="5dp"
+            android:text="@{spell.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Acid Arrow" />
+
+        <TextView
+            android:id="@+id/saved_spell_level"
+            style="@style/SpellListTitleStyle"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="@{level}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2nd" />
+
+        <TextView
+            android:id="@+id/saved_spell_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:text="@{spell.info}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saved_spell_title"
+            tools:text="Evocation - V, S, M" />
+
+        <TextView
+            android:id="@+id/saved_spell_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:paddingHorizontal="10dp"
+            android:text="@{spell.description}"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saved_spell_info"
+            tools:text="A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn." />
+
+        <View
+            android:id="@+id/saved_spell_divider"
+            style="@style/SpellListDivider"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saved_spell_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

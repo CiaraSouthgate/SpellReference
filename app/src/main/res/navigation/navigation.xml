@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/savedSpellListFragment">
+    <fragment
+        android:id="@+id/savedSpellListFragment"
+        android:name="com.ciarasouthgate.spellreference.ui.SavedSpellListFragment"
+        android:label="SavedSpellListFragment">
+        <action
+            android:id="@+id/action_savedSpellListFragment_to_addSpellListFragment"
+            app:destination="@id/addSpellListFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+            android:id="@+id/action_savedSpellListFragment_to_spellDetailFragment"
+            app:destination="@id/spellDetailFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSpellListFragment"
+        android:name="com.ciarasouthgate.spellreference.ui.AddSpellListFragment"
+        android:label="AddSpellListFragment">
+        <action
+            android:id="@+id/action_addSpellListFragment_to_spellDetailFragment"
+            app:destination="@id/spellDetailFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/spellDetailFragment"
+        android:name="com.ciarasouthgate.spellreference.ui.SpellDetailFragment"
+        android:label="SpellDetailFragment">
+        <argument
+            android:name="spell"
+            app:argType="com.ciarasouthgate.spellreference.database.Spell" />
+    </fragment>
+</navigation>

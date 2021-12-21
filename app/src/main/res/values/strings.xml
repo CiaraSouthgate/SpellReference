@@ -1,4 +1,46 @@
 <resources>
-    <string name="app_name">NewsViewer</string>
-    <string name="lipsum">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
+    <string name="app_name">5e Spell Reference</string>
+    <string name="no_results">Can\'t add new spells right now. Check your connection or browse your saved spells.</string>
+    <string name="no_saved">No saved spells. Try adding some!</string>
+    <string name="lipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="lipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer est quam, scelerisque eget dictum a, venenatis quis massa. In fringilla mauris ut lectus ultrices posuere. Nam sapien mauris, fermentum eu sem quis, iaculis tempus justo. Vivamus ex eros, rhoncus eget semper non, dictum sollicitudin diam. Integer eu enim ut mauris cursus scelerisque at ac mauris. Etiam vitae enim a nibh bibendum lacinia quis non sapien. Vivamus est metus, commodo ac imperdiet vel, fermentum non lorem. Nunc consequat tincidunt eros id rutrum. Vivamus pretium vestibulum lorem, a accumsan libero egestas nec. Nunc viverra dolor nulla. Praesent quis volutpat tortor, tincidunt laoreet eros. Vestibulum porta ante vitae leo vestibulum blandit. Proin semper quam in luctus ultricies. Vestibulum ac lectus eget nunc interdum pretium id ac nisi. Cras bibendum mi vitae quam egestas, non fringilla felis vestibulum. Nunc pellentesque ante neque, vitae facilisis purus rutrum eget.\n\nPhasellus elementum a leo id convallis. Nulla facilisi. Duis sagittis porttitor arcu sit amet tempor. In et erat in orci laoreet tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris et magna sapien. Curabitur porttitor nunc non ipsum vehicula suscipit. Suspendisse eget porttitor nulla, ut convallis ligula.\n\nCurabitur interdum suscipit dolor, nec placerat elit congue non. Nulla pharetra tristique suscipit. Nam tincidunt lacus et leo mollis, consectetur condimentum magna vulputate. Suspendisse ultricies vulputate quam. Suspendisse mauris mauris, sagittis eget tincidunt at, bibendum sed nunc. Nullam vulputate libero ut eleifend scelerisque. Vivamus at lobortis orci, vel sodales nibh. Pellentesque sed mauris volutpat erat ultrices cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n\nPraesent finibus vehicula libero condimentum egestas. Phasellus quis auctor mi, sed consequat quam. Phasellus et metus in est eleifend viverra vitae eu metus. Curabitur eget risus porttitor, viverra enim et, sollicitudin enim. Nullam tempor enim eu augue tristique sodales. Ut faucibus mattis augue ac ultrices. Cras scelerisque ac mi ac convallis. Nunc dapibus pellentesque lacus at faucibus. Ut sagittis placerat finibus. Praesent pellentesque ac lectus vitae malesuada. Donec in faucibus eros, et lobortis neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis molestie lacus sit amet augue mollis, in varius orci facilisis. Aenean tristique mauris nec tristique molestie. Integer velit metus, varius a elit dignissim, porttitor pellentesque urna.\n\nSed nec congue quam. Cras pellentesque placerat pulvinar. Sed ullamcorper, risus a volutpat interdum, lorem velit vulputate lorem, nec dignissim elit eros at mauris. Etiam pretium neque nisl, vel consequat tortor pulvinar a. Nunc et justo leo. Aliquam luctus interdum pulvinar. Etiam laoreet nulla sit amet nisl laoreet, id varius libero dictum. Mauris nulla orci, dapibus in iaculis a, dignissim in ante. Quisque a tincidunt lacus, in pulvinar ante. Sed quis porttitor dolor. Phasellus nec condimentum dolor. Fusce eu orci in nisi tristique volutpat. In sed nunc in nulla pulvinar viverra. Duis id sodales dui, in consectetur magna. Vestibulum leo dui, aliquam sed odio in, commodo rhoncus purus.\n\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce massa libero, ullamcorper ullamcorper commodo non, sollicitudin sed nibh. Donec nec varius leo. Cras rutrum est et justo condimentum, eget congue felis lacinia. Fusce eu efficitur purus, at accumsan mauris. Praesent maximus non diam non elementum. Vestibulum mi ante, pharetra vitae luctus vel, venenatis non quam. Etiam luctus libero quam, sed lacinia nisi faucibus sit amet. Nunc tincidunt massa id porttitor accumsan. Aliquam vel accumsan neque. Nullam a tincidunt odio, eu condimentum erat.\n\nQuisque elementum imperdiet justo, vitae gravida urna rhoncus nec. Duis non nunc dictum, interdum ipsum et, eleifend turpis. Sed pulvinar tempus eros. Vestibulum maximus dui id purus gravida, in ultrices urna sodales. Sed tincidunt eros mi, quis faucibus erat laoreet porttitor. Mauris dui urna, dignissim eget commodo a, rhoncus non nibh. Praesent fermentum nunc at enim feugiat mollis. Integer vel libero quam. Sed imperdiet, nisl sit amet gravida posuere, nisi arcu posuere lorem, et tincidunt purus orci vel leo.\n\nQuisque at lectus mi. In sed venenatis turpis, quis elementum libero. Curabitur vitae mauris dui. Integer lacinia vel odio sollicitudin facilisis. Nullam sed vulputate neque, ut posuere ligula. Nunc gravida euismod lectus vitae venenatis. Proin sed rutrum lacus.\n\nNullam diam metus, pellentesque non ante rutrum, sodales varius nibh. Praesent sit amet varius nisi. Cras ut dolor tempor, hendrerit lacus sit amet, tempor leo. Nullam non sapien enim. Maecenas est enim, ultricies sit amet mi non, dictum porta sapien. Nam pellentesque eros non varius condimentum. In gravida consectetur eros, quis ullamcorper turpis efficitur nec. Vivamus fringilla ante eget odio porttitor elementum. Vestibulum sed lectus id enim cursus lacinia. Ut a augue tincidunt, egestas lacus ornare, varius lacus. Pellentesque nec finibus leo. Pellentesque sem nulla, feugiat sit amet nunc ac, pellentesque lobortis nisi. Pellentesque semper elementum ex, sit amet mattis felis. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nCras eget odio orci. Ut tincidunt suscipit dolor, vel suscipit massa dapibus quis. Mauris at massa nec orci elementum rhoncus non vel ante. Suspendisse rutrum facilisis nisi, quis elementum erat bibendum id. Aenean suscipit mauris pharetra sapien viverra, vitae consequat turpis porttitor. Sed nec diam ut enim molestie volutpat. Integer sagittis, neque ac fringilla fermentum, sem magna mollis diam, a facilisis tortor nunc quis nulla. Aliquam at elit sed lorem porttitor mattis. Vivamus efficitur, elit non molestie tincidunt, purus enim elementum orci, eget scelerisque arcu purus ac quam. Nullam imperdiet aliquam blandit. Praesent tincidunt vel dui vel interdum. Praesent et sem suscipit, dignissim purus at, tristique ex. Nam laoreet tellus augue, vitae vehicula tortor scelerisque commodo. Pellentesque vulputate ullamcorper congue. Duis molestie mollis lectus, non placerat dolor hendrerit non. Suspendisse non orci ac sem vestibulum tincidunt.</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="save">Save</string>
+    <string name="remove_saved">Remove From Saved</string>
+    <string name="description">Description</string>
+    <string name="higher_level_abilities">At Higher Levels</string>
+    <string name="materials">Materials</string>
+    <string name="damage">Damage</string>
+    <string name="classes">Classes</string>
+    <string name="duration">Duration</string>
+    <string name="casting_time">Casting Time</string>
+    <string name="components">Components</string>
+    <string name="range">Range</string>
+    <string name="concentration">Concentration</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="school">School</string>
+    <string name="attack_type">Attack Type</string>
+    <string name="damage_type">Damage Type</string>
+    <string name="level">Level</string>
+    <string name="add_spell">Add Spell</string>
+    <string name="search_saved">Search Saved Spells</string>
+    <string name="filter_level">Filter By Level</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove_from_saved">Remove From Saved</string>
+    <string name="favourite">Favourite</string>
+    <string-array name="ordinals">
+        <item>Cantrip</item>
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+        <item>5th</item>
+        <item>6th</item>
+        <item>7th</item>
+        <item>8th</item>
+        <item>9th</item>
+    </string-array>
 </resources>

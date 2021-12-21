@@ -1,15 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.ciarasouthgate.newsviewer"
+        applicationId "com.ciarasouthgate.spellreference"
         minSdkVersion 27
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -24,6 +27,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "API_KEY", "\"2c9f8c5e13bf4c6a8041d56735ecc840\"")
+        }
+        debug {
+            buildConfigField("String", "API_KEY", "\"2c9f8c5e13bf4c6a8041d56735ecc840\"")
         }
     }
     compileOptions {
@@ -36,16 +43,32 @@ android {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$version_kotlin"
+    implementation "androidx.core:core-ktx:$version_core"
+    implementation "androidx.appcompat:appcompat:$version_appcompat"
+    implementation "com.google.android.material:material:$version_material"
+    implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
+    implementation "androidx.legacy:legacy-support-v4:$version_legacy"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$version_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle"
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
+    implementation "androidx.room:room-runtime:$version_room"
+    implementation "androidx.room:room-ktx:$version_room"
+    implementation "androidx.paging:paging-runtime-ktx:$version_paging"
+    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    implementation "com.github.bumptech.glide:glide:$version_glide"
+    implementation "com.github.bumptech.glide:recyclerview-integration:$version_glide"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin"
+    implementation "com.jakewharton.timber:timber:$version_timber"
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    kapt "com.github.bumptech.glide:compiler:$version_glide"
+    kapt "androidx.room:room-compiler:$version_room"
 }
